@@ -1,10 +1,10 @@
 {
     "name": "backend",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "server.ts",
     "license": "MIT",
     "scripts": {
-        "start": "ts-node-dev --respawn --transpile-only --exit-child server.ts",
+        "start": "ts-node-dev --respawn --transpile-only --exit-child nodemon [options] --exec server.ts",
         "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
         "db:push": "npx prisma db push"
     },
@@ -24,6 +24,9 @@
         "cors": "^2.8.5",
         "express": "^4.18.2",
         "hi-base32": "^0.5.1",
+        "mongodb": "^6.1.0",
+        "mongoose": "^7.5.3",
+        "nodemon": "^3.0.1",
         "otpauth": "^9.1.4"
     }
 }

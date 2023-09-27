@@ -2,7 +2,8 @@ import crypto from "crypto";
 import { Prisma } from "@prisma/client";
 import { Request, Response, NextFunction } from "express";
 import { prisma } from "../server";
-import * as OTPAuth from "otpauth";
+const OTPAuth = require("otpauth");
+
 import { encode } from "hi-base32";
 const bcrypt = require('bcrypt');
 
