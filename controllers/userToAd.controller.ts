@@ -4,18 +4,18 @@ import Upload from "../models/upload"
 export const authToAdController = async (req, res, next) => {
   try {
     const mainData = req.body;
-    const { fullName, Gender, DOB, PhNo, issueDate, email, Caption, State } = mainData;
+    const { fullName,email ,type,CertifyUNID, Gender,DOB, PhNo  , Caption } = mainData;
 
     // Create a new instance of your Mongoose model with the data
     const newUpload = new Upload({
       fullName,
+      email,
+      type,
+      CertifyUNID,
       Gender,
       DOB,
       PhNo,
-      issueDate,
-      email,
       Caption,
-      State,
     });
 
     // Save the data to the database

@@ -10,6 +10,16 @@ const uploadSchema = new Schema(
       type: String,
       required: true,
     },
+    email: {
+      type: String,
+      required: true,
+    },
+    type:{
+      type: String,
+    },
+    CertifyUNID: {
+      type: String,
+    },
     Gender: {
       type: String,
       required: true,
@@ -19,22 +29,10 @@ const uploadSchema = new Schema(
       required: true,
     },
     PhNo: {
-      type: String,
-      required: true,
-    },
-    issueDate: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
+      type: Number,
       required: true,
     },
     Caption: {
-      type: String,
-      required: true,
-    },
-    State: {
       type: String,
       required: true,
     },
