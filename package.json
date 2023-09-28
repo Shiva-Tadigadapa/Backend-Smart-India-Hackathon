@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "server.ts",
     "license": "MIT",
-    "scripts": {
+    "type": "module",
+        "scripts": {
         "start": "ts-node-dev --respawn --transpile-only --exit-child nodemon [options] --exec server.ts",
         "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
         "db:push": "npx prisma db push"
