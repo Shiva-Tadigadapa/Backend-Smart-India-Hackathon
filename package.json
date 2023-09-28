@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "module",
         "scripts": {
-        "start": "ts-node-dev --respawn --transpile-only --exit-child nodemon [options] --exec server.ts",
+        "start":  "nodemon --experimental-modules --es-module-specifier-resolution=node server.ts",
         "db:migrate": "npx prisma migrate dev --name user-entity --create-only && npx prisma generate",
         "db:push": "npx prisma db push"
     },
