@@ -1,18 +1,18 @@
 // import { PrismaClient } from "@prisma/client";
-// import express, { Request, Response } from "express";
-const express = require('express');
-const { Request, Response } = require('express');
-// import cors from "cors";
-const cors = require('cors');
-const userToAdRouter = require('./routes/userToAd.route');
-// import authRouter from "./routes/auth.route";
-const authRouter = require('./routes/auth.route');
-// import userToAdRouter from "./routes/userToAd.route"
-// import requests from "./routes/requests.route"
-const requests = require('./routes/requests.route');
+import express, { Request, Response } from "express";
+// const express = require('express');
+// const { Request, Response } = require('express');
+import cors from "cors";
+// const cors = require('cors');
+// const userToAdRouter = require('./routes/userToAd.route');
+import authRouter from "./routes/auth.route";
+// const authRouter = require('./routes/auth.route');
+import userToAdRouter from "./routes/userToAd.route"
+import requests from "./routes/requests.route"
+// const requests = require('./routes/requests.route');
 // import morgan from "morgan";
-// import mongoose from "mongoose";
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
+// const mongoose = require('mongoose');
 
 // export const prisma = new PrismaClient();
 const app = express();
