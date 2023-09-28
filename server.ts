@@ -1,5 +1,7 @@
 // import { PrismaClient } from "@prisma/client";
-import express, { Request, Response } from "express";
+// import express, { Request, Response } from "express";
+const express = require('express');
+const { Request, Response } = require('express');
 import cors from "cors";
 // import authRouter from "./routes/auth.route";
 import userToAdRouter from "./routes/userToAd.route"
