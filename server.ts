@@ -2,19 +2,24 @@
 // import express, { Request, Response } from "express";
 const express = require('express');
 const { Request, Response } = require('express');
-import cors from "cors";
+// import cors from "cors";
+const cors = require('cors');
+const userToAdRouter = require('./routes/userToAd.route');
 // import authRouter from "./routes/auth.route";
-import userToAdRouter from "./routes/userToAd.route"
-import requests from "./routes/requests.route"
-import morgan from "morgan";
-import mongoose from "mongoose";
+const authRouter = require('./routes/auth.route');
+// import userToAdRouter from "./routes/userToAd.route"
+// import requests from "./routes/requests.route"
+const requests = require('./routes/requests.route');
+// import morgan from "morgan";
+// import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 // export const prisma = new PrismaClient();
 const app = express();
 
 async function main() {
   // Middleware
-  app.use(morgan("dev"));
+  // app.use(morgan("dev"));
   app.use(
     cors(
       {
@@ -37,23 +42,23 @@ async function main() {
   };
   
   //   Health Checker
-  app.get("/api/modd", (res: Response) => {
-    res.status(200).json({
-      status: "success",
-      message: "surprise",
-    });
-  });
+  // app.get("/api/modd", (res: Response) => {
+  //   res.status(200).json({
+  //     status: "success",
+  //     message: "surprise",
+  //   });
+  // });
 
   // app.use("/api/auth", authRouter);
   app.use("/", userToAdRouter);
   app.use( "/api", requests)
 
-  app.all("*", (req: Request, res: Response) => {
-    return res.status(404).json({
-      status: "fail",
-      message: `Route: ${req.originalUrl} not found`,
-    });
-  });
+  // app.all("*", (req: Request, res: Response) => {
+  //   return res.status(404).json({
+  //     status: "fail",
+  //     message: `Route: ${req.originalUrl} not found`,
+  //   });
+  // });
 
   const PORT = 8000;
   app.listen(PORT, () => {
